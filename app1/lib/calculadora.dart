@@ -13,17 +13,22 @@ void calculadora() {
   var operacao = line ?? '';
 
   double resultado = 0;
-  if (operacao == "+") {
-    resultado = num1 + num2;
-  } else if (operacao == "-") {
-    resultado = num1 - num2;
-  } else if (operacao == "*") {
-    resultado = num1 * num2;
-  } else if (operacao == "/") {
-    resultado = num1 / num2;
-  } else {
-    print("Operação inválida!");
-    exit(0);
+  switch (operacao) {
+    case "+":
+      resultado = num1 + num2;
+      break;
+    case "-":
+      resultado = num1 - num2;
+      break;
+    case "*":
+      resultado = num1 * num2;
+      break;
+    case "/":
+      resultado = num1 / num2;
+      break;
+    default:
+      print("Operação inválida!");
+      exit(0);
   }
   print("o resultado da operação é $resultado");
 }
