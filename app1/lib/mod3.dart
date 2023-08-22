@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:app1/utils.dart' as utils;
 
 void mod3() {
   // for (var i = 0; i < 5; i++) {
@@ -52,9 +53,7 @@ void mod3() {
   var opcao = "";
   var j2 = 0.0;
   do {
-    print("Digite um número ou 'S' para sair");
-    var line = stdin.readLineSync(encoding: utf8);
-    opcao = line ?? "";
+    var opcao = utils.lerConsole("Digite um número ou 'S' para sair");
     var numero = double.tryParse(opcao);
     if (numero != null) {
       j2 = j2 + numero;
