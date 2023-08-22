@@ -38,14 +38,27 @@ void mod3() {
     i++;
   }
 
-  print("Digite um número ou 'S' para sair");
-  var line = stdin.readLineSync(encoding: utf8);
-  double j = 0;
-  while (line != 'S') {
-    var numero = double.parse(line ?? '');
-    j = j + numero;
+  // print("Digite um número ou 'S' para sair");
+  // var line = stdin.readLineSync(encoding: utf8);
+  // double j = 0;
+  // while (line != 'S') {
+  //   var numero = double.parse(line ?? '');
+  //   j = j + numero;
+  //   print("Digite um número ou 'S' para sair");
+  //   line = stdin.readLineSync(encoding: utf8);
+  // }
+  // print(j);
+
+  var opcao = "";
+  var j2 = 0.0;
+  do {
     print("Digite um número ou 'S' para sair");
-    line = stdin.readLineSync(encoding: utf8);
-  }
-  print(j);
+    var line = stdin.readLineSync(encoding: utf8);
+    opcao = line ?? "";
+    var numero = double.tryParse(opcao);
+    if (numero != null) {
+      j2 = j2 + numero;
+    }
+  } while (opcao != 'S');
+  print(j2);
 }
