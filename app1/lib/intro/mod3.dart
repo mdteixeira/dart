@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:app1/utils.dart' as utils;
+import 'package:app1/intro/utils.dart' as utils;
 
 void mod3() {
   // for (var i = 0; i < 5; i++) {
